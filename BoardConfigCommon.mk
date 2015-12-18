@@ -81,7 +81,12 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_USERIMAGES_USE_EXT4:=true
 USE_CAMERA_STUB := true
 
+# Inherit from CM directly
+-include vendor/cm/BoardConfig.mk
+
 # SELinux
+include vendor/cm/sepolicy/sepolicy.mk
+
 BOARD_SEPOLICY_DIRS += \
     device/google/sprout-common/sepolicy
 
