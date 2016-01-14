@@ -161,6 +161,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # for locales
 PRODUCT_LOCALES := en_US
 
+PRODUCT_COPY_FILES += \
+    device/google/sprout-common/volume.cfg:system/etc/volume.cfg
+
 # Dynamically set props
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
     ro.product.name \
